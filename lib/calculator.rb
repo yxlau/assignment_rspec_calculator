@@ -18,7 +18,7 @@ class Calculator
     result.to_i == result ? output(result.to_i) : output(result)
   end
   def pow(a,b)
-    output(a**b).to_f
+    output((a**b).to_f)
   end
   def sqrt(a)
     raise ArgumentError if a < 0
