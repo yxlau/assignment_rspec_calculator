@@ -123,4 +123,14 @@ describe Calculator do
       end
     end
   end
+
+  describe "#stringify" do
+    it "returns output in form of string when stringify is true" do
+      expect(c_s.output(c.add(1,2))).to be_kind_of(String)
+    end
+    it "returns output as int or float when stringify is false" do
+      expect(c.output(c.sqrt(28))).to be_kind_of(Float)
+      expect(c.output(c.divide(6, 2))).to be_kind_of(Fixnum)
+    end
+  end
 end
